@@ -1,9 +1,17 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import Layout from '../components/Layout';
+import Hero from '../components/Hero';
+import { Link } from 'gatsby';
 
 export default () => (
-  <div>
-    <p>Hello Gatsby!</p>
-    <Link to="/account">Go to your account</Link>
-  </div>
+  <Layout>
+    <Hero />
+    <main className="container">
+      <div className="row align-items-center my-5" >
+        <span>
+          <Link to="/account">Hello Gatsby! Go to your account</Link>
+        </span>
+      </div>
+    </main>
+  </Layout>
 )

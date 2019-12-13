@@ -1,5 +1,7 @@
 import React from "react"
 import { silentAuth } from "./src/utils/auth"
+import AppContainer from './src/components/ReactWrapper';
+import "./node_modules/bootstrap/dist/css/bootstrap.css"
 
 class SessionCheck extends React.Component {
   constructor(props) {
@@ -26,6 +28,7 @@ class SessionCheck extends React.Component {
   }
 }
 
+//Contain app state and app logic away from autentication dependencies. Also, using context to distribute props to child com
 export const wrapRootElement = ({ element }) => {
-  return <SessionCheck>{element}</SessionCheck>
+  return <SessionCheck><AppContainer>{element}</AppContainer></SessionCheck>    
 }

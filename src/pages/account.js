@@ -1,11 +1,11 @@
 import React from "react"
+import AppContext from '../context';
 import { Router } from "@reach/router"
-import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
-import { Link } from "gatsby"
+import Layout from '../components/Layout'
+import Home from '../components/Home'
+import Checkout from '../components/CheckoutUser'
+import { login, isAuthenticated, getProfile } from "../utils/auth"
 
-const Home = ({ user }) => {
-  return <p>Hi, {user.name ? user.name : "friend"}!</p>
-}
 const Settings = () => <p>Settings</p>
 const Billing = () => <p>Billing</p>
 
@@ -19,25 +19,21 @@ const Account = () => {
 
   return (
     <>
-      <nav>
-        <Link to="/account">Home</Link>{" "}
-        <Link to="/account/settings">Settings</Link>{" "}
-        <Link to="/account/billing">Billing</Link>{" "}
-        <a
-          href="#logout"
-          onClick={e => {
-            logout()
-            e.preventDefault()
-          }}
-        >
-          Log Out
-        </a>
-      </nav>
-      <Router>
-        <Home path="/account" user={user} />
-        <Settings path="/account/settings" />
-        <Billing path="/account/billing" />
-      </Router>
+      <Layout>
+        <main className="container">
+          <div className="row align-items-center my-5" >
+          <AppContext.Consumer>
+            {userData => (
+              <Home path="/account" data={userData} user={user} component={Home} />   
+            )}
+          </AppContext.Consumer>
+          <Router>
+            <Settings path="/account/settings" />
+            <Billing path="/account/billing" />
+          </Router>
+          </div>
+        </main>
+      </Layout>
     </>
   )
 }
