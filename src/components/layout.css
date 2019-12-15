@@ -2,6 +2,24 @@ a {
     color: #444546!important
 }
 
+.bg-deepred {
+    background: #b32b1d !important;
+    border-color: #591804
+}
+
+.text-brand {
+    color:#d6dad9 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.text-nav {
+    color:#d6dad9!important;
+    text-transform: uppercase;
+    font-weight:bold
+}
+
 .nav-link-gatsby {
     padding-top: 0.5rem;
     padding-right: 0.5rem;
@@ -9,7 +27,7 @@ a {
 }
 
 .nav a {
-    color:white!important
+    color: #d6dad9!important
 }
 
 /* ------------- Hero Styling --------------- */
@@ -38,13 +56,21 @@ a {
 }
 
 .header-bkgrd {
-    background-image: url('https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80')
+    background-image: url('https://res.cloudinary.com/doopingen/image/upload/v1576440970/unit4/pizza-bkgrd-optimized_c1npnq.jpg')
 }
 
 .header-title {
-    color: white;
+    color: #d6dad9;
     font-weight: 600
 }
+
+.btn-cta {
+    background: #b92c1b;
+    color: #d6dad9!important;
+    text-transform:uppercase;
+    font-weight:bold
+}
+
 
 /* ------------- Pizza Builder --------------- */
 
@@ -71,6 +97,16 @@ a {
     text-align:center
 }
 
+.card-order-header {
+    text-transform:uppercase;
+    font-weight:bold;
+    font-size: 1.3rem
+}
+
+.logo-home {
+    max-width: 195px
+}
+
 .container-desktop-md {
     max-width:900px
 }
@@ -78,4 +114,9 @@ a {
 .text-small {
     font-size: 20px;
     margin-right: 10px
+}
+
+.btn-remove {
+    background: #b92c1b!important;
+    color: #d6dad9!important;
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import data from '../data/toppings';
 import { Link } from 'gatsby';
 import PizzaModal from './PizzaModal';
-import { ButtonToolbar, ToggleButtonGroup, ToggleButton, Button } from 'react-bootstrap';
+import { ButtonToolbar, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 
 const PizzaPanel = (props) => {
     const [btnValue, setBtnValue] = useState([]);

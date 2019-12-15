@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import CheckoutModal from './CheckoutModal';
 import { Link } from 'gatsby'
 
 const CheckOutUser = (props) => {
-    const [orderCost, setOrderCost] = useState([0]);
 
     const add = (a, b) => {
         return a + b
     }
-
-    const orderTotal = orderCost.reduce(add);
     
     const mappedOrders = props.data.order.map((order) => {
         const pizzaTotal = order.cost.reduce(add);

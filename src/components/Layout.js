@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <Header siteTitle={title} />
-            <div className='container-fluid'>
+            <div className='container-fluid pl-0 pr-0'>
                 { children }
             </div>
             <Footer />
