@@ -6,7 +6,7 @@ const AppContainer = ({ children }) => {
   const { addressLine1, addressLine2, city, state, zip, phone, order, pizzaImg, onChange, onSubmit, handlePizzaClick, pizzaOrderStart, addToCart, pendingCost, clearOrder } = customerState();
 
   return (
-    <AppContext.Provider value={{ addressLine1, addressLine2, city, state, zip, phone, order, pizzaImg, onChange, onSubmit, handlePizzaClick, pizzaOrderStart, addToCart, pendingCost, clearOrder}}>
+    <AppContext.Provider value={{ addressLine1, addressLine2, city, state, zip, phone, order, pizzaImg, onChange, onSubmit, handlePizzaClick, pizzaOrderStart, addToCart, pendingCost, clearOrder }}>
       {children}
     </AppContext.Provider>
   );

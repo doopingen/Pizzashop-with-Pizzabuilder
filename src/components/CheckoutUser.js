@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
-import { Form, Modal, Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
+import CheckoutModal from './CheckoutModal';
 
 const CheckOutUser = (props) => {
-    const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const title = () => {
+        return (
+            <>
+                <p>Hello</p>
+            </>
+        )
+    }
+    const body = () => {
+        return (
+            <>
+                <p>alsdjfl;asdkjf</p>
+            </>
+        )
+    }
 
     const add = (a, b) => {
         return a + b
@@ -91,23 +103,8 @@ const CheckOutUser = (props) => {
                     <Form.Group id="formGridCheckbox">
                         <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
-
-                    <Button variant="primary" onClick={handleShow}>Launch demo modal</Button>
                 </Form>
-                <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                    <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Save Changes
-                    </Button>
-                    </Modal.Footer>
-                </Modal>
+                <CheckoutModal />
             </div>
         </div>
     </div>
@@ -116,3 +113,4 @@ const CheckOutUser = (props) => {
 }
 
 export default CheckOutUser 
+

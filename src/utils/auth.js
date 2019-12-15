@@ -39,6 +39,7 @@ export const login = () => {
 
 const setSession = (cb = () => {}) => (err, authResult) => {
   if (err) {
+    console.log(err)
     navigate("/")
     cb()
     return

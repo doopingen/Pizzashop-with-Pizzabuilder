@@ -9,9 +9,8 @@ const CustomerState = () => {
   const [phone, setPhone] = useState('');
   const [order, setOrders] = useState([]);
   const [pizzaImg, setPizzaImg] = useState([]);
-  const [pendingCost, setPendingCost] = useState([10]);
+  const [pendingCost, setPendingCost] = useState([0]);
   const [pendingOrderToppings, setPendingOrderToppings] = useState([]);
-
 
   const onChange = (e) => {
     setCity(e.target.value);
@@ -23,8 +22,10 @@ const CustomerState = () => {
   }
 
   const addToCart = () => {
-    setOrders([{toppings: pendingOrderToppings, cost: pendingCost}]);
+    let id = order.length;
+    setOrders([...order, {toppings: pendingOrderToppings, cost: pendingCost, id: id}]);
     pizzaOrderStart();
+    console.log(`Pizza added to cart`)
   }
 
   const pizzaOrderStart = () => {
@@ -42,8 +43,10 @@ const CustomerState = () => {
     setPendingOrderToppings([...pendingOrderToppings, topping.name]);
   }
 
-  const clearOrder = () => {
-    console.log("test")
+  const clearOrder = (e, id) => {
+    e.preventDefault();
+    setOrders(order.filter(pizza => pizza.id !== id));
+    console.log(id)
   }
 
   const removeToppingClick = (arr) => {
@@ -54,6 +57,7 @@ const CustomerState = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     setOrders(...order, );
+    console.log("Done as well")
   };
 
 
@@ -72,7 +76,7 @@ const CustomerState = () => {
     pizzaOrderStart,
     addToCart,
     pendingCost,
-    clearOrder
+    clearOrder,
   };
 };
 

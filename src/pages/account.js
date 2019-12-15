@@ -20,19 +20,17 @@ const Account = () => {
   return (
     <>
       <Layout>
-        <main className="container">
-          <div className="row align-items-center my-5" >
-          <AppContext.Consumer>
-            {userData => (
-              <Home path="/account" data={userData} user={user} component={Home} />   
-            )}
-          </AppContext.Consumer>
-          <Router>
-            <Settings path="/account/settings" />
-            <Billing path="/account/billing" />
-          </Router>
-          </div>
-        </main>
+          <main className="row align-items-center" >
+            <AppContext.Consumer>
+              {userData => (
+                <Home path="/account" data={userData} user={user} component={Home} />   
+              )}
+            </AppContext.Consumer>
+            <Router>
+              <Settings path="/account/settings" />
+              <Billing path="/account/billing" />
+            </Router>
+          </main>
       </Layout>
     </>
   )

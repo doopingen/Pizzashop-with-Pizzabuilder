@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import data from '../data/toppings';
 import { Link } from 'gatsby';
+import PizzaModal from './PizzaModal';
 import { ButtonToolbar, ToggleButtonGroup, ToggleButton, Button } from 'react-bootstrap';
 
 const PizzaPanel = (props) => {
@@ -9,6 +10,10 @@ const PizzaPanel = (props) => {
     useEffect(() => {
         props.data.pizzaOrderStart();
     }, [])
+
+    const addPizzaToCart = () => {
+        props.data.addToCart();
+    }
 
     const handleChange = val => setBtnValue(val);
 
@@ -36,7 +41,8 @@ const PizzaPanel = (props) => {
                 <h3 className="text-center">${orderTotal}</h3>
             </div>
             <div className="text-white text-center mt-3">
-                <Button onClick={props.data.addToCart} className="mr-3">Add to Cart</Button>
+                <PizzaModal addToCart={props.data.addToCart}/>
+                {/* <Button onClick={ addPizzaToCart } className="mr-3">Add to Cart</Button> */}
                 <Link className="nav-link-gatsby text-white" to="/account/billing">Checkout</Link>{" "}
             </div>
         </>

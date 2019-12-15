@@ -1,3 +1,7 @@
+a {
+    color: #444546!important
+}
+
 .nav-link-gatsby {
     padding-top: 0.5rem;
     padding-right: 0.5rem;
@@ -58,3 +62,20 @@
 }
 
 
+/* ------------- Home --------------- */
+
+.user-banner {
+    width:100vw;
+    padding: 1rem 1rem;
+    background: #f8f8f8;
+    text-align:center
+}
+
+.container-desktop-md {
+    max-width:900px
+}
+
+.text-small {
+    font-size: 20px;
+    margin-right: 10px
+}
