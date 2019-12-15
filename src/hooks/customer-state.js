@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ENGINE_METHOD_ALL } from 'constants';
 
 const CustomerState = () => {
   const [addressLine1, setAddressLine1] = useState('');
@@ -13,18 +14,36 @@ const CustomerState = () => {
   const [pendingOrderToppings, setPendingOrderToppings] = useState([]);
 
   const onChange = (e) => {
-    setCity(e.target.value);
-    setState(e.target.value);
-    setZip(e.target.value);
-    setPhone(e.target.value);
-    setAddressLine1(e.target.value);
-    setAddressLine2(e.target.value);
+    if (e.target.name === 'Add1'){
+      setAddressLine1(e.target.value);
+    }
+    if (e.target.name === 'Add2'){
+      setAddressLine2(e.target.value);
+    }
+    if (e.target.name === 'City'){
+      setCity(e.target.value);
+    }
+    if (e.target.name === 'State'){
+      setState(e.target.value);
+    }
+    if (e.target.name === 'Zip'){
+      setZip(e.target.value);
+    }
+    if (e.target.name === 'Phone'){
+      setPhone(e.target.value);
+    }
   }
 
   const addToCart = () => {
     let id = order.length;
     setOrders([...order, {toppings: pendingOrderToppings, cost: pendingCost, id: id}]);
     pizzaOrderStart();
+    console.log(`Pizza added to cart`)
+  }
+
+  const addPromoOrder = () => {
+    let id = order.length;
+    setOrders([...order, {toppings: ['Double Meat', 'Double Cheese'], cost: [22,1,1], id: id}]);
     console.log(`Pizza added to cart`)
   }
 
@@ -49,15 +68,10 @@ const CustomerState = () => {
     console.log(id)
   }
 
-  const removeToppingClick = (arr) => {
-    const newArr = [];
-    newArr.push([...arr])
-  }
-
   const onSubmit = (e) => {
     e.preventDefault();
     setOrders(...order, );
-    console.log("Done as well")
+    console.log("Done submitting")
   };
 
 
@@ -75,6 +89,7 @@ const CustomerState = () => {
     handlePizzaClick,
     pizzaOrderStart,
     addToCart,
+    addPromoOrder,
     pendingCost,
     clearOrder,
   };

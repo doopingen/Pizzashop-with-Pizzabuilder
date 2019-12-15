@@ -18,6 +18,7 @@ const Home = (props) => {
                     <p>Cheese Pizza with {`${order.toppings}`}</p>
                     <small className="text-muted">$ {orderTotal}</small>
                     <Button onClick={((e) => props.data.clearOrder(e, order.id))} >Remove</Button>
+                    <hr />
                 </>
             );
         }
@@ -36,7 +37,6 @@ const Home = (props) => {
                     <div className="col-lg-3">
                         <h1 className="my-4">Shop Name</h1>
                         <div className="list-group">
-                        <Link className="list-group-item text-center text-uppercase font-weight-bold" to="/account/settings">Edit Profile</Link>
                         <Link className="list-group-item text-center text-uppercase font-weight-bold" to="/checkout">Checkout</Link>
                         <Link className="list-group-item text-center text-uppercase font-weight-bold" to="/pizzabuilder">Build Your Pizza</Link>
                         </div>
@@ -55,8 +55,7 @@ const Home = (props) => {
                                 }
                                 {props.data.order.length > 0 &&
                                     <> 
-                                        <hr />
-                                        <Button className={orderBtnDisplay} onClick={((e) => props.data.handlePizzaClick(e))}>Place Order</Button>
+                                        <Link className="list-group-item text-center text-uppercase font-weight-bold" to="/checkout">Checkout</Link>
                                     </>
                                 }
                             </div>
@@ -67,10 +66,8 @@ const Home = (props) => {
                                 <h3 className="card-title">Product Name</h3>
                                 <h4>$24.99</h4>
                                 <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit ugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure,ducimus!</p>
-                                <span className="text-warning">★ ★ ★ ★ ☆</span>
-                                4.0 stars
                                 <hr />
-                                <Button className={orderBtnDisplay} onClick={((e) => props.data.handlePizzaClick(e))}>Order Now!</Button>
+                                <Button className={orderBtnDisplay} onClick={((e) => props.data.addPromoOrder(e))}>Order Now!</Button>
                             </div>
                         </div>
                     </div>
