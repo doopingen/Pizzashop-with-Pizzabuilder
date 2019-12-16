@@ -9,7 +9,7 @@ export default () => (
     <main className="container">
       <div className="row align-items-center my-5" >
         <span>
-          <Link to="/account">Hello Gatsby! Go to your account</Link>
+          <Link to="/account">Hello! Go to your account</Link>
         </span>
       </div>
     </main>
