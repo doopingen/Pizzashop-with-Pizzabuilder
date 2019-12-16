@@ -4,6 +4,8 @@ import { Link } from 'gatsby';
 
 const Home = (props) => {
 
+    if (!props.data) { return <p>Loading...</p> }
+
     const add = (a, b) => {
         return a + b
     }
