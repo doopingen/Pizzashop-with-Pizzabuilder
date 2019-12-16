@@ -7,6 +7,8 @@ import { ButtonToolbar, ToggleButtonGroup, ToggleButton } from 'react-bootstrap'
 const PizzaPanel = (props) => {
     const [btnValue, setBtnValue] = useState([]);
 
+    if (!props.data) { return <p>Loading...</p> }
+
     useEffect(() => {
         props.data.pizzaOrderStart();
     }, [])
