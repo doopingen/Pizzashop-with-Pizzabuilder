@@ -14,8 +14,8 @@ const Home = (props) => {
             return (
                 <>
                     <p>Cheese Pizza with {`${order.toppings}`}</p>
-                    <h4 className="pl-3 text-bold text-muted">$ {orderTotal}</h4>
-                    <Button classname="pl-3 btn-remove" size="sm" onClick={((e) => props.data.clearOrder(e, order.id))} >Remove</Button>
+                    <small className="pr-3 text-muted fnt-body-med">$ {orderTotal}</small>
+                    <Button variant="secondary" classname="pl-3 btn-remove" size="sm" onClick={((e) => props.data.clearOrder(e, order.id))} >Remove</Button>
                     <hr />
                 </>
             );

@@ -5,8 +5,7 @@ import AppContext from '../context';
 
 export default () => (
     <Layout>
-      <main className="container">
-        <div className="row align-items-center my-5" >
+       <main className="row align-items-center">
           <span>
             <AppContext.Consumer>
             {userData => (
@@ -14,7 +13,6 @@ export default () => (
             )}
             </AppContext.Consumer>
           </span>
-        </div>
       </main>
     </Layout>
   )
