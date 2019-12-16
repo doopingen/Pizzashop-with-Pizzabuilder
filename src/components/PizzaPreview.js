@@ -2,6 +2,8 @@ import React from 'react';
 
 const PizzaPreview = (props) => {
 
+  if (!props.data) { return <p>Loading...</p> }
+
   const mappedProgress = props.data.pizzaImg.map((topping) => {
 
     return (
