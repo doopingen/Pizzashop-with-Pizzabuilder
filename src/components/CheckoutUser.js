@@ -5,9 +5,12 @@ import { Link } from 'gatsby'
 
 const CheckOutUser = (props) => {
 
+    if (!props.data) { return <p>Loading...</p> }
+    
     const add = (a, b) => {
         return a + b
     }
+
     const mappedOrdersCheckout = props.data.order.map((order) => {
         const pizzaTotal = order.cost.reduce(add);
         if (props.data.order.length > 0){
