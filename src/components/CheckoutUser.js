@@ -8,8 +8,7 @@ const CheckOutUser = (props) => {
     const add = (a, b) => {
         return a + b
     }
-    
-    const mappedOrders = props.data.order.map((order) => {
+    const mappedOrdersCheckout = props.data.order.map((order) => {
         const pizzaTotal = order.cost.reduce(add);
         if (props.data.order.length > 0){
             return (
@@ -44,7 +43,7 @@ const CheckOutUser = (props) => {
                                 Your Order
                             </div>
                             <div className="card-body">
-                                {mappedOrders}
+                                {mappedOrdersCheckout}
                                 {props.data.order.length === 0 &&
                                     <>
                                         <p>Time to order some pizza!</p>
@@ -54,7 +53,7 @@ const CheckOutUser = (props) => {
                                     <> 
                                         <p>Thank you for your business. Payment is required on delivery</p>
                                     </>
-                                }
+                                } 
                             </div>
                         </div>
                         <div className="card mt-4">

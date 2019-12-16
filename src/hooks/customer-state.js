@@ -8,7 +8,7 @@ const CustomerState = () => {
   const [state, setState] = useState('');
   const [zip, setZip] = useState('');
   const [phone, setPhone] = useState('');
-  const [order, setOrders] = useState([]);
+  const [order, setOrders] = useState([]) || [0];
   const [pizzaImg, setPizzaImg] = useState([]);
   const [pendingCost, setPendingCost] = useState([0]);
   const [pendingOrderToppings, setPendingOrderToppings] = useState([]);
