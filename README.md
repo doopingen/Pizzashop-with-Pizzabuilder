@@ -1,6 +1,6 @@
 # PIZZA SHOP WITH PIZZA BUILDER
 
-This is a app that is inspired by current trends in pizza intake. I built and app that showcases a fictitous pizza shop with a workflow that centers around the ability to create and order pizzas online. 
+This is a app that is inspired by current trends in online pizza ordering. I built an app that showcases a fictitous pizza shop with a workflow that centers around the ability to create and order pizzas online. 
 
 ## Development stack
 
