@@ -75,7 +75,7 @@ a {
 /* ------------- Pizza Builder --------------- */
 
 .pizza-bkgrd {
-    background:black;
+    background-image: url('https://res.cloudinary.com/doopingen/image/upload/v1576489079/unit4/Wood-Pattern-pizza_ky8dtj.png');
     height:375px
 }
 

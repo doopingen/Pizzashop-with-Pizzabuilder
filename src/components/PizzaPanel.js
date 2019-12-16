@@ -25,7 +25,7 @@ const PizzaPanel = (props) => {
 
     const mappedToppings = data.ToppingData.map((topping) => {
         return (
-            <ToggleButton value={topping.id} onClick={((e) => props.data.handlePizzaClick(e, topping))}>{topping.name}</ToggleButton>
+            <ToggleButton variant="secondary" value={topping.id} onClick={((e) => props.data.handlePizzaClick(e, topping))}>{topping.name}</ToggleButton>
         );
     });
 
@@ -34,16 +34,16 @@ const PizzaPanel = (props) => {
             <ButtonToolbar>
                 <ToggleButtonGroup className="mx-auto" type="checkbox" value={btnValue} onChange={handleChange}>
                     {mappedToppings}
-                    <ToggleButton value="1" onClick={((e) => props.data.pizzaOrderStart())}>Clear</ToggleButton>
+                    <ToggleButton variant="secondary" value="1" onClick={((e) => props.data.pizzaOrderStart())}>Clear</ToggleButton>
                 </ToggleButtonGroup>
             </ButtonToolbar>
             <div className="text-white text-center mt-3">
-                <h3 className="text-center">${orderTotal}</h3>
+                <h3 className="text-center">Pizza Cost: ${orderTotal}</h3>
             </div>
             <div className="text-white text-center mt-3">
                 <PizzaModal addToCart={props.data.addToCart}/>
                 {/* <Button onClick={ addPizzaToCart } className="mr-3">Add to Cart</Button> */}
-                <Link className="nav-link-gatsby text-white" to="/account/billing">Checkout</Link>{" "}
+                <Link className="ml-4 btn btn-secondary text-white" to="/account/billing">Checkout</Link>{" "}
             </div>
         </>
     )

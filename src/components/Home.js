@@ -15,7 +15,7 @@ const Home = (props) => {
                 <>
                     <p>Cheese Pizza with {`${order.toppings}`}</p>
                     <small className="pr-3 text-muted fnt-body-med">$ {orderTotal}</small>
-                    <Button variant="secondary" classname="pl-3 btn-remove" size="sm" onClick={((e) => props.data.clearOrder(e, order.id))} >Remove</Button>
+                    <Button variant="secondary" size="sm" onClick={((e) => props.data.clearOrder(e, order.id))} >Remove</Button>
                     <hr />
                 </>
             );

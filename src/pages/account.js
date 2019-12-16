@@ -3,7 +3,6 @@ import AppContext from '../context';
 import { Router } from "@reach/router"
 import Layout from '../components/Layout'
 import Home from '../components/Home'
-import Checkout from '../components/CheckoutUser'
 import { login, isAuthenticated, getProfile } from "../utils/auth"
 
 const Settings = () => <p>Settings</p>

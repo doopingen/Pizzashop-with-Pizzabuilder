@@ -13,7 +13,7 @@ const PizzaModal = (props) => {
 
     return(
         <>
-            <Button variant="primary" onClick={handleShow}>Place Order</Button>
+            <Button variant="secondary" onClick={handleShow}>Place Order</Button>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                 <Modal.Title>Pizza added to cart</Modal.Title>

@@ -15,8 +15,8 @@ const CheckOutUser = (props) => {
             return (
                 <>
                     <p>Cheese Pizza with {`${order.toppings}`}</p>
-                    <small className="text-muted">$ {pizzaTotal}</small>
-                    <Button onClick={((e) => props.data.clearOrder(e, order.id))} >Remove</Button>
+                    <small className="pr-3 text-muted fnt-body-med">$ {pizzaTotal}</small>
+                    <Button variant="secondary" size="sm" onClick={((e) => props.data.clearOrder(e, order.id))} >Remove</Button>
                     <hr />
                 </>
             );
@@ -33,7 +33,7 @@ const CheckOutUser = (props) => {
             <div className="container-desktop-md container">
                 <div className="row">
                     <div className="col-lg-3">
-                        <h1 className="my-4">Shop Name</h1>
+                        <img className="my-4 logo-home" src="https://res.cloudinary.com/doopingen/image/upload/v1576444236/unit4/pizza-logo-admin_da8al5.png" alt="Logo"/>
                         <div className="list-group">
                         <Link className="list-group-item text-center text-uppercase font-weight-bold" to="/pizzabuilder">Build More Pizza</Link>
                         </div>
@@ -58,7 +58,7 @@ const CheckOutUser = (props) => {
                             </div>
                         </div>
                         <div className="card mt-4">
-                            <img className="card-img-top img-fluid" src="http://placehold.it/900x400" alt="" />
+                            <img className="card-img-top img-fluid" src="https://res.cloudinary.com/doopingen/image/upload/v1576486763/unit4/pizza-red-banner_abuvsp.png" alt="order banners" />
                             <div className="card-body">
                                 <h3 className="card-title">Order Details</h3>
                                 <Form>

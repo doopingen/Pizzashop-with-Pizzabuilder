@@ -9,7 +9,7 @@ const CheckoutModal = () => {
     const handleShow = () => setShow(true);
     return(
         <>
-            <Button variant="primary" onClick={handleShow}>Place Order</Button>
+            <Button variant="secondary" onClick={handleShow}>Place Order</Button>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                 <Modal.Title>Congratulations</Modal.Title>
