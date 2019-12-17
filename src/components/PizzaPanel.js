@@ -6,12 +6,13 @@ import { ButtonToolbar, ToggleButtonGroup, ToggleButton } from 'react-bootstrap'
 
 const PizzaPanel = (props) => {
     const [btnValue, setBtnValue] = useState([]);
-
-    if (!props.data) { return <p>Loading...</p> }
-
+    
     useEffect(() => {
         props.data.pizzaOrderStart();
     }, [])
+    
+    //useEffect can't be put underneath conditionals
+    if (!props.data) { return <p>Loading...</p> }
 
     const addPizzaToCart = () => {
         props.data.addToCart();
